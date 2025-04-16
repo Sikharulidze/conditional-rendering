@@ -1,22 +1,19 @@
 import React from "react";
-import Login from "./Login";
-import Input from "./Input";
+import Form from "./Form";
 
 
-var isLoggedin = false;
+var userIsRegistered = true;
 
-function loginCheck() {
-  if (isLoggedin === true) {
-    return <h1>Hello</h1>;
-  } else {
-    return (
-      <Login />
-    );
-  }
+
+function App(){
+  return (
+   <div className="container">
+       <Form isRegistered={userIsRegistered} />
+  </div>
+  );
 }
 
-function App() {
-  return <div className="container">{loginCheck()}</div>;
-}
+
+
 
 export default App;
